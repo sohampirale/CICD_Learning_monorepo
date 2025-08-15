@@ -9,7 +9,7 @@ const server = new WebSocketServer({
 server.on("connection",async(socket)=>{
     socket.send("Hi there you are connected over WS")
 
-    await client.User.create({
+    await client.user.create({
         data:{
             username:Math.random().toString(),
             password:"Random1234"
