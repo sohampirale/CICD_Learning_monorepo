@@ -11,6 +11,12 @@ app.get('/', (req, res) => {
     })
 })
 
+app.get('/http', (req, res) => {
+    res.status(200).json({
+        message:'Hello World from prod branch!'
+    })
+})
+
 
 app.post('/signup',async (req,res)=>{
     const {username,password} = req.body;
