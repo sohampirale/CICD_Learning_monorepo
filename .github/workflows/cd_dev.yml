@@ -20,6 +20,8 @@ jobs:
           username: ${{ secrets.VM_USERNAME }}
           key: ${{ secrets.VM_PRIVATE_KEY }}
           script: |
-            cd /CICD_Learning_monorepo
+            cd /home/soham/CICD_Learning_monorepo || exit 1
             git pull origin main
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             pm2 restart all
