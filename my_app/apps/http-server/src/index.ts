@@ -7,7 +7,13 @@ app.use(express.json())
 
 app.get('/', (req, res) => {
     res.status(200).json({
-        message:'Hello World!'
+        message:'Hello World! at route /'
+    })
+})
+
+app.get('/http', (req, res) => {
+    res.status(200).json({
+        message:'Hello World6! at route /http'
     })
 })
 
